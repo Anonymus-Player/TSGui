@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../Widgets.hpp"
+#include "../Widgets/Widgets.hpp"
 
 namespace Handlers
 {
