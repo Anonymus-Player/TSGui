@@ -10,10 +10,17 @@ add_library(TSGui SHARED
     Handlers/Handlers.cpp)
 
 set_target_properties(TSGui PROPERTIES VERSION ${PROJECT_VERSION})
-set_target_properties(TSGui PROPERTIES PUBLIC_HEADER TSGui.hpp)
+set_target_properties(TSGui PROPERTIES PUBLIC_HEADERS 
+    TSGui/TSGui.hpp
+    Handlers/Handlers.hpp
+    Getters/Getters.hpp
+    Getters/Getters.tpp
+    Creators/Creators.hpp
+    Creators/Creators.tpp
+    CanvasUpdater/CanvasUpdater.hpp)
 
 configure_file(TSGui.pc.in TSGui.pc @ONLY)
-target_include_directories(TSGui PRIVATE .)
+#target_include_directories(TSGui PRIVATE .)
 
 install(TARGETS TSGui
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
