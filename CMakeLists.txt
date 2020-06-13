@@ -10,7 +10,7 @@ add_library(TSGui SHARED
     Handlers/Handlers.cpp)
 
 set_target_properties(TSGui PROPERTIES VERSION ${PROJECT_VERSION})
-set_target_properties(TSGui PROPERTIES PUBLIC_HEADER TSGui/TSGui.hpp)
+set_target_properties(TSGui PROPERTIES PUBLIC_HEADER TSGui.hpp)
 
 configure_file(TSGui.pc.in TSGui.pc @ONLY)
 target_include_directories(TSGui PRIVATE .)
