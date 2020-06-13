@@ -17,7 +17,8 @@ set_target_properties(TSGui PROPERTIES PUBLIC_HEADERS
     Getters/Getters.tpp
     Creators/Creators.hpp
     Creators/Creators.tpp
-    CanvasUpdater/CanvasUpdater.hpp)
+    CanvasUpdater/CanvasUpdater.hpp
+    Widgets/Widgets.hpp)
 
 configure_file(TSGui.pc.in TSGui.pc @ONLY)
 #target_include_directories(TSGui PRIVATE .)
