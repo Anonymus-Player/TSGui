@@ -4,7 +4,7 @@
 #include "Creators.hpp"
 #include "../Handlers/Handlers.hpp"
 
-tgui::ChildWindow::Ptr Creators::CreateChildWindow(const tgui::Layout2d& Position, 
+tgui::ChildWindow::Ptr TSGui::Creators::CreateChildWindow(const tgui::Layout2d& Position, 
     const tgui::Layout2d& Size, const std::string& Title, bool IsMovable, bool KeepInParent)
 {
     tgui::ChildWindow::Ptr ChildWindow = tgui::ChildWindow::create(Title);
@@ -23,7 +23,7 @@ tgui::ChildWindow::Ptr Creators::CreateChildWindow(const tgui::Layout2d& Positio
 }
 
 template< typename Variable >
-tgui::EditBox::Ptr Creators::CreateEditBox(const tgui::Layout2d& Position, 
+tgui::EditBox::Ptr TSGui::Creators::CreateEditBox(const tgui::Layout2d& Position, 
     const tgui::Layout2d& Size, const std::string& DefaultText, 
     const std::string& Signal, Variable& Var)
 {
@@ -53,7 +53,7 @@ tgui::EditBox::Ptr Creators::CreateEditBox(const tgui::Layout2d& Position,
 } 
 
 template< typename Func, typename... Args >
-tgui::Button::Ptr Creators::CreateButton(const tgui::Layout2d& Position, const tgui::Layout2d& Size, 
+tgui::Button::Ptr TSGui::Creators::CreateButton(const tgui::Layout2d& Position, const tgui::Layout2d& Size, 
     const std::string& DefaultText, const std::string& Signal, Func&& Function, Args&&... Arguments)
 {
     tgui::Button::Ptr Button = tgui::Button::create(DefaultText);
@@ -65,7 +65,7 @@ tgui::Button::Ptr Creators::CreateButton(const tgui::Layout2d& Position, const t
     return Button;
 }
 
-tgui::Label::Ptr Creators::CreateLabel(const tgui::Layout2d& Position, 
+tgui::Label::Ptr TSGui::Creators::CreateLabel(const tgui::Layout2d& Position, 
     std::size_t TextSize, const std::string& DefaultText)
 {
     tgui::Label::Ptr Label = tgui::Label::create(DefaultText);
@@ -76,7 +76,7 @@ tgui::Label::Ptr Creators::CreateLabel(const tgui::Layout2d& Position,
 }
 
 template< typename Variable >
-tgui::ComboBox::Ptr Creators::CreateComboBox(const tgui::Layout2d& Position, const tgui::Layout2d& Size, 
+tgui::ComboBox::Ptr TSGui::Creators::CreateComboBox(const tgui::Layout2d& Position, const tgui::Layout2d& Size, 
     const std::vector< std::string > Items, Variable& Var)
 {
     tgui::ComboBox::Ptr ComboBox = tgui::ComboBox::create();
@@ -94,7 +94,7 @@ tgui::ComboBox::Ptr Creators::CreateComboBox(const tgui::Layout2d& Position, con
     return ComboBox;
 }
 
-tgui::MenuBar::Ptr Creators::CreateMenubar(MenuItems&& MenuItems)
+tgui::MenuBar::Ptr TSGui::Creators::CreateMenubar(MenuItems&& MenuItems)
 {
     tgui::MenuBar::Ptr MenuBar = tgui::MenuBar::create();
     for(auto& Item : MenuItems)
@@ -113,7 +113,7 @@ tgui::MenuBar::Ptr Creators::CreateMenubar(MenuItems&& MenuItems)
 }
 
 template< typename Func, typename... Args >
-tgui::Canvas::Ptr Creators::CreateCanvas(CanvasUpdater& UpdatePool, const tgui::Layout2d& Position, 
+tgui::Canvas::Ptr TSGui::Creators::CreateCanvas(CanvasUpdater& UpdatePool, const tgui::Layout2d& Position, 
     const tgui::Layout2d& Size, Func&& Function, Args&&... Arguments)
 {
     tgui::Canvas::Ptr Canvas = tgui::Canvas::create();
@@ -124,7 +124,7 @@ tgui::Canvas::Ptr Creators::CreateCanvas(CanvasUpdater& UpdatePool, const tgui::
 }
 
 template< typename Func, typename... Args >
-tgui::Scrollbar::Ptr Creators::CreateScrollbar(const tgui::Layout2d& Position, const tgui::Layout2d& Size, 
+tgui::Scrollbar::Ptr TSGui::Creators::CreateScrollbar(const tgui::Layout2d& Position, const tgui::Layout2d& Size, 
     unsigned int MaxValue, unsigned int ViewportSize, Func&& Function, Args&&... Arguments)
 {
     tgui::Scrollbar::Ptr ScrollBar = tgui::Scrollbar::create();
@@ -138,7 +138,7 @@ tgui::Scrollbar::Ptr Creators::CreateScrollbar(const tgui::Layout2d& Position, c
 }
 
 template< typename Func, typename... Args >
-tgui::ListBox::Ptr Creators::CreateList(const tgui::Layout2d& Position, const tgui::Layout2d& Size,
+tgui::ListBox::Ptr TSGui::Creators::CreateList(const tgui::Layout2d& Position, const tgui::Layout2d& Size,
     const StringVector& Items, Func&& Function, Args&&... Arguments)
 {
     tgui::ListBox::Ptr ListBox = tgui::ListBox::create();
@@ -153,7 +153,7 @@ tgui::ListBox::Ptr Creators::CreateList(const tgui::Layout2d& Position, const tg
 }
 
 template< typename Func, typename... Args >
-tgui::ListView::Ptr Creators::Create2DList(const tgui::Layout2d& Position, const tgui::Layout2d& Size, 
+tgui::ListView::Ptr TSGui::Creators::Create2DList(const tgui::Layout2d& Position, const tgui::Layout2d& Size, 
     const StringMatrix& Items, Func&& Function, Args&&... Arguments)
 {
 	tgui::ListView::Ptr ListView = tgui::ListView::create();
@@ -174,7 +174,7 @@ tgui::ListView::Ptr Creators::Create2DList(const tgui::Layout2d& Position, const
 }
 
 template< typename Func, typename... Args >
-tgui::Group::Ptr Creators::CreateScrollableCanvas(CanvasUpdater& UpdatePool, const tgui::Layout2d& Position, 
+tgui::Group::Ptr TSGui::Creators::CreateScrollableCanvas(CanvasUpdater& UpdatePool, const tgui::Layout2d& Position, 
     const tgui::Layout2d& Size, const sf::Vector2u& WholeSize, Func&& DrawFunction, Args&&... Arguments)
 {
     tgui::Group::Ptr BoxLayout = tgui::BoxLayout::create();
