@@ -1,1 +1,1 @@
-# The-Spell-Gui
+# The-Spell-Gui (TSGui)
