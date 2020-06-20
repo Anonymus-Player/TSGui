@@ -38,16 +38,16 @@ tgui::EditBox::Ptr TSGui::Creators::CreateEditBox(const tgui::Layout2d& Position
             if constexpr(std::is_same< Variable, int >::value)
             {
                 Editbox->setInputValidator(tgui::EditBox::Validator::Int);
-                Editbox->connect(Signal, Getters::getEditBoxValue< Variable >, Editbox, std::ref(Var));
+                Editbox->connect(Signal, Setters::getEditBoxValue< Variable >, Editbox, std::ref(Var));
             }
             else
             {
                 Editbox->setInputValidator(tgui::EditBox::Validator::Float);
-                Editbox->connect(Signal, Getters::getEditBoxValue< Variable >, Editbox, std::ref(Var));
+                Editbox->connect(Signal, Setters::getEditBoxValue< Variable >, Editbox, std::ref(Var));
             }
         }
         else
-            Editbox->connect(Signal, Getters::getEditBoxValue< Variable >, Editbox, std::ref(Var));
+            Editbox->connect(Signal, Setters::getEditBoxValue< Variable >, Editbox, std::ref(Var));
 
         return Editbox;
 } 

@@ -2,6 +2,7 @@
 
 #include "../Widgets/Widgets.hpp"
 #include "../Getters/Getters.hpp"
+#include "../Setters/Setters.hpp"
 #include "../CanvasUpdater/CanvasUpdater.hpp"
 
 namespace TSGui

@@ -1,22 +1,11 @@
 #pragma once
 
-#include <TGUI/Widgets/EditBox.hpp>
-#include <TGUI/Widgets/ComboBox.hpp>
+#include <TGUI/Layout.hpp>
 
 namespace TSGui
 {
     namespace Getters
     {
-        ///
-        ///
-        ///
-        template< typename Value >
-        static void getEditBoxValue(tgui::EditBox::Ptr EditBox, Value& Variable);
-        ///
-        ///
-        ///
-        template< typename Value >
-        static void getComboBoxValue(tgui::ComboBox::Ptr ComboBox, Value& Variable);
         ///
         ///
         ///
@@ -29,5 +18,3 @@ namespace TSGui
             const sf::Vector2f& Size, const sf::Vector2f& ParentSize = {1280, 768});
     }
 }
-
-#include "Getters.tpp"
