@@ -1,7 +1,7 @@
 #include "Setters.hpp"
 
 template< typename Value >
-void TSGui::Setters::getEditBoxValue(tgui::EditBox::Ptr EditBox, Value& Variable)
+void TSGui::Setters::setEditBoxValue(tgui::EditBox::Ptr EditBox, Value& Variable)
 {
     std::string Text = EditBox->getText();
     if(Text.length() == 0)
@@ -20,7 +20,7 @@ void TSGui::Setters::getEditBoxValue(tgui::EditBox::Ptr EditBox, Value& Variable
 }
 
 template< typename Value >
-void TSGui::Setters::getComboBoxValue(tgui::ComboBox::Ptr ComboBox, Value& Variable)
+void TSGui::Setters::setComboBoxValue(tgui::ComboBox::Ptr ComboBox, Value& Variable)
 {
     if constexpr(std::is_enum< Value >::value)
     {

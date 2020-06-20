@@ -12,12 +12,12 @@ namespace TSGui
         ///
         ///
         template< typename Value >
-        static void getEditBoxValue(tgui::EditBox::Ptr EditBox, Value& Variable);
+        static void setEditBoxValue(tgui::EditBox::Ptr EditBox, Value& Variable);
         ///
         ///
         ///
         template< typename Value >
-        static void getComboBoxValue(tgui::ComboBox::Ptr ComboBox, Value& Variable);
+        static void setComboBoxValue(tgui::ComboBox::Ptr ComboBox, Value& Variable);
     }
 }
 
